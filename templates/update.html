@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+   Update 
+{% endblock title %}
+    
+
+{% block content %}
+
+<div class="header">
+    <h1>Update</h1>
+    <a href=" {% url 'home' %}">GO BACK</a>
+</div>
+
+
+<div class="search p-2">
+<form action="" method='POST' style="padding: 20px;">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Update Task">
+</form></div>
+{% endblock content %}
+    
